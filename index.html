@@ -26,7 +26,12 @@
     <header class="jumbotron bg-info">
       <h1 class="display-4 text-center text-light mt-2">Work Day Scheduler</h1>
       <br />
-      <p class="lead  text-center text-light mt-5">"There are dreamers and there are planners;<br /> the planners make their dreams come true." <br /> - Edwin Louis Cole</p>
+      <div class="currentDate"></div>
+      <p class="lead text-center text-light mt-5">
+        "There are dreamers and there are planners;<br />
+        the planners make their dreams come true." <br />
+        - Edwin Louis Cole
+      </p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
@@ -211,7 +216,7 @@
       <div class="row">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span id="timeSlots" class="mr-2 mt-2 ">7:00 PM</span>
+            <span id="timeSlots" class="mr-2 mt-2">7:00 PM</span>
           </div>
           <input
             type="text"
@@ -236,15 +241,27 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button  id="clearTasks" class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button
+            id="clearTasks"
+            class="btn btn-success ml-2 mb-2"
+            type="button"
+          ></button>
         </div>
       </div>
-
     </div>
 
-<div class="endQuote text-center">"At the end of the day, <br /> we can endure much more <br /> than we <i>think</i> we can. <br /> - Frida Kahlo"</div>
-<button class="btn btn-success ml-2 mb-2 justify-content-center" type="button">Clear Your Tasks</button>
-
+    <div class="endQuote text-center">
+      "At the end of the day, <br />
+      we can endure much more <br />
+      than we <i>think</i> we can. <br />
+      - Frida Kahlo"
+    </div>
+    <button
+      class="btn btn-success ml-2 mb-2 justify-content-center"
+      type="button"
+    >
+      Clear Your Tasks
+    </button>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
