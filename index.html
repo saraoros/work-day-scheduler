@@ -18,7 +18,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,7 +30,7 @@
     <header class="jumbotron bg-info">
       <h1 class="display-4 text-center text-light mt-2">Work Day Scheduler</h1>
       <br />
-      <div class="currentDate"></div>
+      <div class="todaysDate"></div>
       <p class="lead text-center text-light mt-5">
         "There are dreamers and there are planners;<br />
         the planners make their dreams come true." <br />
@@ -49,7 +53,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -65,7 +69,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -81,7 +85,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -97,7 +101,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -113,7 +117,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -129,7 +133,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -145,7 +149,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -161,7 +165,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -177,7 +181,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -193,7 +197,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -209,7 +213,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -225,7 +229,7 @@
             aria-label=""
             aria-describedby="basic-addon1"
           />
-          <button class="btn btn-success ml-2 mb-2" type="button"></button>
+          <button class="btn btn-success ml-2 mb-2" type="button"><i class="far fa-save"></i></button>
         </div>
       </div>
 
@@ -245,7 +249,7 @@
             id="clearTasks"
             class="btn btn-success ml-2 mb-2"
             type="button"
-          ></button>
+          ><i class="far fa-save"></i></button>
         </div>
       </div>
     </div>
@@ -256,11 +260,11 @@
       than we <i>think</i> we can. <br />
       - Frida Kahlo"
     </div>
-    <button
-      class="btn btn-success ml-2 mb-2 justify-content-center"
+    <button id="clearTasks"
+      class="btn btn-success mb-2 align-center"
       type="button"
-    >
-      Clear Your Tasks
+    >Clear Your Tasks <i class="fas fa-eraser"></i>
+      
     </button>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
