@@ -5,7 +5,9 @@ body {
   }
   
 #currentDay {
-  
+  font-family: 'Inconsolata';
+  font-size: 24px;
+  color: #77dd77;
 }
 
   .text {
