@@ -4,6 +4,10 @@ body {
     line-height: 1;
   }
   
+#currentDay {
+  
+}
+
   .text {
     background: transparent;
     border: none;
