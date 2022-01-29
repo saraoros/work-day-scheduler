@@ -4,7 +4,7 @@ var currentDay =
   moment().format('dddd') + ' ' + moment().format('MMMM DD YYYY');
 var hourSpan;
 
-var userInput;
+var userInput= " ";
 var eight = $('#eight');
 var nine = $('#nine');
 var ten = $('#ten');
@@ -21,40 +21,46 @@ var seven = $('#seven');
 
 
 function timeSlots() {
+    var slotEight = JSON.parse(localStorage.getItem('#eight')); eight.val(slotEight);
 
-var slotEight = JSON.parse(localStorage.getItem('#eight')); eight.val(slotEight);
+    var slotNine = JSON.parse(localStorage.getItem('#nine')); nine.val(slotNine);
 
-var slotNine = JSON.parse(localStorage.getItem('#nine')); nine.val(slotNine);
+    var slotTen = JSON.parse(localStorage.getItem('#ten')); ten.val(slotTen);
 
-var slotTen = JSON.parse(localStorage.getItem('#ten')); ten.val(slotTen);
+    var slotEleven = JSON.parse(localStorage.getItem('#eleven')); eleven.val(slotEleven);
 
-var slotEleven = JSON.parse(localStorage.getItem('#eleven')); eleven.val(slotEleven);
+    var slotTwelve = JSON.parse(localStorage.getItem('#twelve')); twelve.val(slotTwelve);
 
-var slotTwelve = JSON.parse(localStorage.getItem('#twelve')); twelve.val(slotTwelve);
+    var slotOne = JSON.parse(localStorage.getItem('#one')); one.val(slotOne);
 
-var slotOne = JSON.parse(localStorage.getItem('#one')); one.val(slotOne);
+    var slotTwo = JSON.parse(localStorage.getItem('#two')); two.val(slotTwo);
 
-var slotTwo = JSON.parse(localStorage.getItem('#two')); two.val(slotTwo);
+    var slotThree = JSON.parse(localStorage.getItem('#three')); three.val(slotThree);
 
-var slotThree = JSON.parse(localStorage.getItem('#three')); three.val(slotThree);
+    var slotFour = JSON.parse(localStorage.getItem('#four')); four.val(slotFour);
 
-var slotFour = JSON.parse(localStorage.getItem('#four')); four.val(slotFour);
+    var slotFive = JSON.parse(localStorage.getItem('#five')); five.val(slotFive);
 
-var slotFive = JSON.parse(localStorage.getItem('#five')); five.val(slotFive);
+    var slotSix = JSON.parse(localStorage.getItem('#six')); six.val(slotSix);
 
-var slotSix = JSON.parse(localStorage.getItem('#six')); six.val(slotSix);
+    var slotSeven = JSON.parse(localStorage.getItem('#seven')); seven.val(slotSeven);
 
-var slotSeven = JSON.parse(localStorage.getItem('#seven')); seven.val(slotSeven);
-
-console.log("currentHour" + hour);
+console.log("currentHour" + hour + userInput);
 }
 
-timeSlots();
+
+$(document).ready(function(){
+  timeSlots();
+  // formFunction();
 
 
-$(".saveBtn").on("click", function(){
+$(".btn").on("click", function(){
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
 })
+
+
+
+
 
 
 
@@ -74,3 +80,5 @@ $("#clearTasks").on("click", function() {
     localStorage.clear();
     timeSlots();
 })
+
+});
