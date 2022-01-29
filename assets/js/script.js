@@ -1,10 +1,11 @@
+// start of global variables
 var hour = moment().hours();
 var currentHour = moment().format('h:mm:ss a');
 var currentDay =
   moment().format('dddd') + ' ' + moment().format('MMMM DD YYYY');
 var hourSpan;
+var userInput = '';
 
-var userInput = ' ';
 var eight = $('#eight');
 var nine = $('#nine');
 var ten = $('#ten');
@@ -18,6 +19,10 @@ var five = $('#five');
 var six = $('#six');
 var seven = $('#seven');
 
+
+
+
+// time slot function to save tasks to localStorage
 function timeSlots() {
   var slotEight = JSON.parse(localStorage.getItem('08:00 AM'));
   eight.val(slotEight);
@@ -58,6 +63,7 @@ function timeSlots() {
   console.log('currentHour' + hour + userInput);
 }
 
+// moment time and date
   var interval = setInterval(function () {
     var momentNow = moment();
     $('#currentDay').html(
@@ -67,17 +73,19 @@ function timeSlots() {
   }, 100);
 
 
-  
+
 
 function timeCheck() {
   $('.form-control').each(function() {
-     var time = parseInt($(this).attr('id'));
+     var time = parseInt($(this).attr('slots'));
      if (hour > time) {
-       $(this).addClass('.past');
+       $(this).addClass('past');
+
      } else if (hour < time) {
-       $(this).addClass('.future');
+       $(this).addClass('future');
+
      } else {
-       $(this).addClass('.present');
+       $(this).addClass('present');
      }
   });
 }
@@ -85,27 +93,27 @@ function timeCheck() {
 
 
 
-
-
   $('.btn').on('click', function () {
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
-    userInput = $(this).siblings(".form-control").val().trim();
-    hourSpan = $(this).siblings(".input-group-prepend").text().trim();
+    localStorage.getItem(hourSpan, JSON.stringify(userInput));
+    userInput = $(this).siblings('.form-control').val().trim();
+    hourSpan = $(this).siblings('.input-group-prepend').text().trim();
     console.log(hourSpan);
     console.log(userInput);
   });
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
   timeSlots();
   timeCheck();
 
 
 
   //Button for clear tasks
-  $('#clearTasks').on('click', function () {
-    localStorage.clear();
+  $("#clearTasks").on("click", function() {
+   localStorage.clear();
     timeSlots();
+  
   });
 });

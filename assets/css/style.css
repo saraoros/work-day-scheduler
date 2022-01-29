@@ -62,11 +62,6 @@ body {
     color: white;
   }
 
-  #clearTasks {
-   margin-left: 38%;
-   margin-top: 10px;
-  
-  }
   
   .btn {
     border-left: 0px solid black;
@@ -81,3 +76,28 @@ body {
     transition: all .3s ease-in-out;
   } 
   
+  #clearTasks {
+   padding-top: 15px;
+    font-family: 'Rubik';
+    font-size: 18px;
+    margin-left: 40%;
+    margin-top: 10px;
+    border-style: none;
+   border-radius: 5%;
+    background-color: red;
+    color: white;
+    padding-bottom: 15px;
+   
+   }
+ 
+   #clearTasks:hover {
+    font-family: 'Rubik';
+    font-size: 18px;
+    color: black;
+     margin-left: 40%;
+     margin-top: 10px;
+     border-style: none;
+    border-radius: 5%;
+     transition: all .3s ease-in-out;
+     background-color: #77dd77;
+   }
